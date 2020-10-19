@@ -1,0 +1,70 @@
+package u2e1recursividad;
+
+import java.util.*;
+
+public class U2E1Recursividad {
+
+    public static void main(String[] args) {
+        /*
+        1.Fibonacci(21) de 0 a 21
+        2.Mostrar del 1 al 10 (1 2 3 4 5 6 7 8 9 10)
+        3.Factorial solo imprime el resultado final
+        4.Numeros en escalera 
+        5.Palindromos(no importa si se declara o pide variable)
+        6.Salir
+         */
+        Scanner entrada = new Scanner(System.in);
+        int opc = 0, c = 0;
+        int fib = 0, n = 0, numero = 0, es = 0;
+        int fa = 0;
+        int resultado;
+        Operarecursi instanciaOperarecursi = new Operarecursi();
+
+        do {
+            System.out.println(" *Recursividad GamerPink* ");
+            System.out.println("-----------------------------");
+            System.out.println("Selecciones su Opcion: ");
+            System.out.println("1 Fibonacci de 0 a 20");
+            System.out.println("2 Mostrar de 1 a 10");
+            System.out.println("3 Factoriar");
+            System.out.println("4 Numeros en escalera");
+            System.out.println("5 Palindromos");
+            System.out.println("6 Salir");
+            System.out.println("-----------------------------");
+            opc = entrada.nextInt();
+            System.out.println("-----------------------------");
+            switch (opc) {
+                case 1:
+                    //Fibonacci
+                    instanciaOperarecursi.fibonacciRecur(fib);
+                    for (int i = 0; i <= 20; i++) {
+                        System.out.println((i) + "");
+                    }
+                    System.out.println("-----------------------------");
+                    break;
+                case 2:
+                    //Numeros del 1 al 10
+                    instanciaOperarecursi.numeros(10);
+                    System.out.println("-----------------------------");
+                    break;
+                case 3:
+                    //Factorizar
+                    instanciaOperarecursi.factorial(fa);
+                    System.out.println("Numero: ");
+                    resultado = entrada.nextInt();
+                    System.out.println(instanciaOperarecursi.factorial(resultado));
+                    System.out.println("-----------------------------");
+                    break;
+                case 4:
+                    //Numeros en escalera
+                    instanciaOperarecursi.escalera(es);
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    System.exit(0);
+                    break;
+            }//switch
+        } while (c == 0);
+    }//public static void
+}//public class
