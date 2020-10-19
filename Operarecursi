@@ -1,0 +1,38 @@
+package u2e1recursividad;
+
+import java.util.*;
+
+public class Operarecursi {
+
+    Scanner entrada = new Scanner(System.in);
+    public int fibonacciRecur(int fib) {
+        if (fib == 0 || fib == 1) {
+            return fib;
+        } else {
+            return fibonacciRecur(fib - 1) + fibonacciRecur(fib - 2);
+        }
+    }
+
+    public void numeros(int n) {
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(i);
+        }
+    }
+
+    public int factorial(int fa) {
+        if (fa == 0) {
+            return 1;
+        } else {
+            return fa * factorial(fa - 1);
+        }
+    }
+
+    public int escalera(int es) {
+        for (int i = 10; i <= 1; i--) {
+            for (int j = 10; j <= 1; j--) {
+                System.out.println(j);
+            }
+        }
+        return es;
+    }
+}
